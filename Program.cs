@@ -96,3 +96,96 @@
 // первое число - число из которого берётся корень
 // double x = Math.Sqrt(25); // 5
 // Console.WriteLine(x);
+
+
+// Math.Round - округление
+// первое число - число которое округляется
+// второе - количество знаков после запятой
+// double x = 10.0123123123123123123123;
+// Console.WriteLine("Наш x равен " + Math.Round(x, 5));
+// // Можно использовать специальные символы для округления при интерполяции
+// // см. https://metanit.com/sharp/tutorial/7.5.php
+// Console.WriteLine($"Наш x равен {x:f5}");
+
+
+// Задача 1.
+// Напишите программу, которая принимает на вход координаты точки (X и Y), причём X ≠ 0 и Y ≠ 0 и 
+// выдаёт номер четверти плоскости, в которой находится эта точка и показывает диапазон возможных координат точек в этой четверти (x и y).
+// A (2, 3) -> 1 четверть, x > 0, y > 0
+// A (-5, -8) -> 3 четверть, x < 0, y < 0
+
+
+// Console.WriteLine("Введите ось х : ");
+// string text = Console.ReadLine();
+// int x = Convert.ToInt32(text);
+// Console.WriteLine("Введите ось у : ");
+// string text_1 = Console.ReadLine();
+// int y = Convert.ToInt32(text_1);
+
+// if(x == 0 || y == 0)
+// {
+//     Console.WriteLine(" Нуль не вводи ");
+// }
+
+// if(x < 0 && y < 0)
+// {
+//     Console.WriteLine("3-ая четверть");
+// }
+// if(x < 0 && y > 0)
+// {
+//     Console.WriteLine("2-ая четверть");
+// }
+// if(x > 0 && y < 0)
+// {
+//     Console.WriteLine("4-ая четверть");
+// }
+// if(x > 0 && y > 0)
+// {
+//     Console.WriteLine("1-ая четверть");
+// }
+
+// Задача 2.
+// Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 2D пространстве.
+// A (3,6); B (2,1) -> 5,09
+// A (7,-5); B (1,-1) -> 7,21
+
+// Console.WriteLine("Введите ось х1 : ");
+// string text = Console.ReadLine();
+// double x1 = Convert.ToDouble(text);
+// Console.WriteLine("Введите ось у1 : ");
+// string text_1 = Console.ReadLine();
+// double y1 = Convert.ToDouble(text_1);
+// Console.WriteLine("Введите ось х2 : ");
+// string text_y = Console.ReadLine();
+// double x2 = Convert.ToDouble(text_y);
+// Console.WriteLine("Введите ось у2 : ");
+// string text_2 = Console.ReadLine();
+// double y2 = Convert.ToDouble(text_2);
+
+// double distance = Math.Sqrt(Math.Pow((x2-x1),2) + Math.Pow((y2- y1),2));
+
+// Console.WriteLine("Расстояние между точками в 2d пространстве = " + distance);
+
+
+
+
+// Задача 3. Напишите программу, которая принимает на вход число (N) и выдаёт таблицу квадратов чисел от 1 до N.
+// 5 -> 1, 4, 9, 16, 25.
+// 2 -> 1,4
+
+
+// Console.WriteLine("Введите число: ");
+// string text = Console.ReadLine();
+// double number = Convert.ToDouble(text);
+// double index1 = 0;
+
+// while (index1 < number)
+// {
+//     index1++;
+//     double kvadrat = Math.Pow(index1, 2);
+//     Console.WriteLine(kvadrat);
+// }
+
+// Console.WriteLine("Введите число: ");
+// int N = Convert.ToInt32(Console.ReadLine());
+// for (int i = 1; i <= N; Console.Write(i * i + ", "), i++);
